@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com"
+           revision="refs/tags/android-6.0.1_r46" />
+
+  <remote  name="private"
+           fetch="ssh://git@github.com" />
+
+  <remote  name="github"
+                fetch="git://github.com/"
+                review="https://gerrit.bbqdroid.org/" />
+                
+  <default revision="refs/heads/c6"
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
+
+  <remote  name="cd"
+           fetch="https://github.com/CandyDevices"
+           revision="c6" />
+
+  <remote  name="cm"
+           fetch="https://github.com/CyanogenMod"
+           revision="cm-13.0" />
+
+  <remote  name="Slim"
+           fetch="git://github.com/SlimRoms"
+           review="https://review.slimroms.org/"/>
+
+  <remote  name="tm"
+           fetch="https://github.com/themuppets"
+           revision="cm-13.0" />
+           
+  <remote  name="aospb"
+           fetch="https://github.com/AOSPB"
+           revision="mm6.0" />
+
+   <!-- Candy Projects -->
+  <project path="build" name="CandyRoms/build" remote="github" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="art" name="CandyRoms/art" remote="github" revision="c6"  />
+  <project path="bionic" name="CandyRoms/bionic" remote="github" revision="c6" />
+  <project path="bootable/recovery" name="CandyRoms/bootable_recovery" remote="github" revision="c6" />
+  <project path="device/qcom/common" name="CandyRoms/device_qcom_common" remote="github" revision="c6" />
+  <project path="external/e2fsprogs" name="CandyRoms/external_e2fsprogs" groups="pdk" remote="github" revision="c6" />
+  <project path="external/google" name="CandyRoms/external_google" remote="github" revision="c6" />
+  <project path="external/guava" name="CandyRoms/external_guava" groups="pdk-cw-fs,pdk-fs" remote="github" revision="c6" />
+  <project path="external/libnfc-nci" name="CandyRoms/external_libnfc-nci" remote="github" revision="c6" />
+  <project path="external/okhttp" name="CandyRoms/external_okhttp" remote="github" revision="c6" />
+  <project path="external/sepolicy" name="CandyRoms/external_sepolicy" remote="github" revision="c6" />
+  <project path="external/skia" name="CandyRoms/external_skia" remote="github" revision="c6" />
+  <project path="frameworks/av" name="CandyRoms/frameworks_av" remote="github" revision="c6" />
+  <project path="frameworks/base" name="CandyRoms/frameworks_base" remote="github" revision="c6" />
+  <project path="frameworks/opt/bluetooth" name="CandyRoms/frameworks_opt_bluetooth" groups="pdk-cw-fs,pdk-fs" remote="github" revision="c6" />
+  <project path="frameworks/opt/net/ims" name="CandyRoms/frameworks_opt_net_ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs"  remote="github" revision="c6" />
+  <project path="frameworks/native" name="CandyRoms/frameworks_native" remote="github" revision="c6" />
+  <project path="frameworks/support" name="CandyRoms/frameworks_support" groups="pdk-cw-fs,pdk-fs" remote="github" revision="c6" />
+  <project path="frameworks/opt/telephony" name="CandyRoms/frameworks_opt_telephony" remote="github" revision="c6" />
+  <project path="hardware/broadcom/libbt" name="CandyRoms/hardware_broadcom_libbt" groups="pdk" remote="github" revision="c6" />
+  <project path="hardware/broadcom/wlan" name="CandyRoms/hardware_broadcom_wlan" remote="github" revision="c6" />
+  <project path="hardware/libhardware" name="CandyRoms/hardware_libhardware" remote="github" revision="c6" />
+  <project path="hardware/qcom/camera" name="CandyRoms/hardware_qcom_camera" remote="github" revision="c6" />
+  <project path="hardware/qcom/fm" name="CandyRoms/hardware_qcom_fm" remote="github" revision="c6" />
+  <project path="hardware/qcom/wlan" name="CandyRoms/hardware_qcom_wlan" remote="github" revision="c6" />
+  <project path="libcore" name="CandyRoms/libcore" remote="github" revision="c6" />
+  <project path="packages/apps/Bluetooth" name="CandyRoms/packages_apps_Bluetooth" groups="pdk-cw-fs" remote="github" revision="c6" />
+  <project path="packages/apps/Contacts" name="CandyRoms/packages_apps_Contacts" remote="github" revision="c6" />
+  <project path="packages/apps/DeskClock" name="CandyRoms/packages_apps_DeskClock" remote="github" revision="c6" />
+  <project path="packages/apps/Dialer" name="CandyRoms/packages_apps_Dialer" remote="github" revision="c6" />
+  <project path="packages/apps/Exchange" name="CandyRoms/packages_apps_Exchange" groups="pdk-fs" remote="github" revision="c6" />
+  <project path="packages/apps/InCallUI" name="CandyRoms/packages_apps_InCallUI" remote="github" revision="c6" />
+  <project path="packages/apps/LockClock" name="CandyRoms/packages_apps_LockClock" remote="github" revision="c6" />
+  <project path="packages/apps/Nfc" name="CandyRoms/packages_apps_Nfc" remote="github" groups="apps_nfc,pdk-fs" revision="c6" />
+  <project path="packages/apps/Settings" name="CandyRoms/packages_apps_Settings" remote="github" revision="c6" />
+  <project path="packages/services/Telephony" name="CandyRoms/packages_services_Telephony" remote="github" revision="c6" />
+  <project path="packages/services/Telecomm" name="CandyRoms/packages_services_Telecomm" remote="github" revision="c6" />
+  <project path="system/bt" name="CandyRoms/system_bt" groups="pdk" remote="github" revision="c6" />
+  <project path="system/core" name="CandyRoms/system_core" remote="github" revision="c6" />
+  <project path="system/extras" name="CandyRoms/system_extras" remote="github" revision="c6" />
+</manifest>
